@@ -1,9 +1,9 @@
 class Solution {
     public int myAtoi(String s) {
-        s=s.trim(); //it will remove white space
-        long num=0;
+        s=s.trim(); // Remove leading and trailing whitespace
+        long num=0; // Use long to handle overflow during calculation
         int n = s.length();
-        if(s.isEmpty())
+        if(s.isEmpty())  // If the string is empty after trimming
         {
             return 0;
         }
@@ -14,7 +14,7 @@ class Solution {
             sign=(s.charAt(i)=='-')?-1:1;
             i++;
         }
-
+        // Convert the digits to integer
         while(i<n && Character.isDigit(s.charAt(i)))
         {
             num = num*10 + (s.charAt(i)-'0');
