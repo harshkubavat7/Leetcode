@@ -16,9 +16,10 @@ class Solution {
         while(start<end)
         {
             int temp=nums[start];
-            nums[start++]=nums[end];
-            nums[end--]=temp;
-           
+            nums[start]=nums[end];
+            nums[end]=temp;
+           start++;
+           end--;
         }
     }
 
